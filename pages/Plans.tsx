@@ -37,13 +37,16 @@ const PlanCard: React.FC<{ plan: any }> = ({ plan }) => {
         ))}
       </ul>
 
-      <Button 
-        fullWidth 
-        variant={isPro ? 'primary' : 'outline'}
-        className={isPro ? 'bg-gradient-to-r from-[#355AFD] to-[#1F274C]' : ''}
-      >
-        Escolher {plan.name}
-      </Button>
+      {/* Link para o App com parâmetro from_site=1 */}
+      <a href="https://app-kadem.netlify.app/auth?from_site=1" target="_blank" className="w-full block">
+        <Button 
+          fullWidth 
+          variant={isPro ? 'primary' : 'outline'}
+          className={isPro ? 'bg-gradient-to-r from-[#355AFD] to-[#1F274C]' : ''}
+        >
+          Escolher {plan.name}
+        </Button>
+      </a>
     </div>
   );
 };

@@ -5,6 +5,9 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import Plans from './pages/Plans';
 import Support from './pages/Support';
+import Terms from './pages/Terms';
+import Privacy from './pages/Privacy';
+import Cookies from './pages/Cookies';
 import ScrollToTopButton from './components/ScrollToTopButton';
 
 const ScrollToTop = () => {
@@ -22,12 +25,14 @@ const MainLayout: React.FC = () => {
     <div className="flex flex-col min-h-screen">
       <Navbar />
       <main className="flex-grow pt-20">
-        {/* We use the key prop to trigger the animation re-render on route change */}
         <div key={location.pathname} className="animate-page-enter">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/plans" element={<Plans />} />
             <Route path="/support" element={<Support />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/cookies" element={<Cookies />} />
           </Routes>
         </div>
       </main>

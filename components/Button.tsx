@@ -1,7 +1,7 @@
 import React from 'react';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary' | 'red' | 'outline';
+  variant?: 'primary' | 'secondary' | 'red' | 'outline' | 'yellow'; // Adicionado 'yellow'
   size?: 'sm' | 'md' | 'lg';
   fullWidth?: boolean;
 }
@@ -28,7 +28,8 @@ const Button: React.FC<ButtonProps> = ({
     primary: "bg-gradient-to-l from-[#1F274C] to-[#344079] hover:from-[#344079] hover:to-[#1F274C] text-white shadow-lg shadow-blue-900/20 bg-[length:200%_auto]",
     secondary: "bg-[#CCCCCC] text-[#222222] hover:bg-[#b3b3b3]",
     red: "bg-[#D64A2E] text-white hover:bg-[#b13c25]",
-    outline: "border-2 border-[#1F274C] text-[#1F274C] hover:bg-[#1F274C] hover:text-white"
+    outline: "border-2 border-[#1F274C] text-[#1F274C] hover:bg-[#1F274C] hover:text-white",
+    yellow: "bg-gradient-to-l from-[#f39c12] to-[#FFCA37] hover:from-[#FFCA37] hover:to-[#f39c12] text-[#1F274C] shadow-lg shadow-yellow-500/20 bg-[length:200%_auto]" // Novo estilo Yellow
   };
 
   return (

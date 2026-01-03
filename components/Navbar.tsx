@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Button from './Button';
+import logoImg from '../assets/img/kadem-logo.png';
 
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -33,12 +34,11 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-[#1F274C] to-[#344079] rounded-lg flex items-center justify-center text-white font-bold text-xl group-hover:scale-105 transition-transform">
-              K
-            </div>
-            <span className={`font-bold text-2xl tracking-tight ${scrolled ? 'text-[#1F274C]' : 'text-[#1F274C]'}`}>
-              Kadem
-            </span>
+            <img 
+              src={logoImg} 
+              alt="Kadem" 
+              className="h-10 w-auto object-contain group-hover:scale-105 transition-transform" 
+            />
           </Link>
 
           {/* Desktop Nav */}
@@ -57,7 +57,7 @@ const Navbar: React.FC = () => {
           </div>
 
           <div className="hidden md:flex items-center gap-4">
-            <Link to="/plans">
+            <Link to="https://app-kadem.netlify.app/auth" target="_blank">
                <Button variant="primary" size="sm">Começar Agora</Button>
             </Link>
           </div>
