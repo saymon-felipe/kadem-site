@@ -10,6 +10,8 @@ import Privacy from './pages/Privacy';
 import Cookies from './pages/Cookies';
 import ScrollToTopButton from './components/ScrollToTopButton';
 
+import AnalyticsTracker from './components/AnalyticsTracker';
+
 const ScrollToTop = () => {
   const { pathname } = useLocation();
   React.useEffect(() => {
@@ -23,6 +25,8 @@ const MainLayout: React.FC = () => {
 
   return (
     <div className="flex flex-col min-h-screen">
+      <AnalyticsTracker />
+      
       <Navbar />
       <main className="flex-grow pt-20">
         <div key={location.pathname} className="animate-page-enter">
