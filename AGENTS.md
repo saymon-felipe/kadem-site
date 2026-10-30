@@ -13,7 +13,7 @@ Leia estes arquivos antes de modificar o site público:
 Iteração:
 
 - Novas instruções de projeto devem ser atualizadas em `kadem-ai-context/docs/`, criando e/ou alterando arquivos existentes — não crie documentação técnica dentro deste repositório (`kadem-site`).
-- `kadem-ai-context` é commitado automaticamente quando alterado (skill `context-commit`), mas nunca dê `git push` nele sem o usuário pedir.
+- `kadem-ai-context` é commitado automaticamente quando alterado (skill `context-commit`). O push dele só é feito depois que o commit de origem estiver em `origin/main` deste projeto, que não tem `dev` (condições na skill); fora disso, nunca dê `git push` nele sem o usuário pedir.
 
 Regra de trabalho:
 
